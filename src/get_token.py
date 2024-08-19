@@ -3,9 +3,9 @@ import httpx
 def get_token():
 
     # Definir a URL
-    url = 'http://localhost:8000/api/token/'
+    url = 'http://0.0.0.0:8000/api/token/'
 
-    data = {'email': 'admin@senfio.com', 'password': 'admin'}
+    data = {'email': 'jose.leao@senfio.com', 'password': 'admin'}
 
     # Definir cabeçalhos
     headers = {'Content-Type': 'application/json'}

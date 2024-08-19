@@ -1,12 +1,12 @@
 import httpx
 
-def send_timeack(token_access: str):
+def send_timeack(token_access: str, mac: str):
 
     # Definir a URL
     url = 'http://127.0.0.1:8000/device_communication/connection_timeack'
 
     payload = {
-        'mac': '00:1A:2B:3C:4D:5E'.lower(),
+        'mac': mac.lower(),
     }
     topic = 'senfio/qs/+/connection/timeack'
     topic_wildcard = payload['mac'].replace(':', '')
