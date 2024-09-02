@@ -1,4 +1,6 @@
 import httpx
+from datetime import datetime
+
 
 def send_timeack(token_access: str, mac: str):
 
@@ -6,10 +8,10 @@ def send_timeack(token_access: str, mac: str):
     url = 'http://127.0.0.1:8000/device_communication/connection_timeack'
 
     payload = {
-        'mac': mac.lower(),
+        'MAC': mac.lower()
     }
     topic = 'senfio/qs/+/connection/timeack'
-    topic_wildcard = payload['mac'].replace(':', '')
+    topic_wildcard = payload['MAC'].replace(':', '')
 
     data = str({
             'topic': topic,

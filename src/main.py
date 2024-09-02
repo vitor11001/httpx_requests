@@ -6,11 +6,11 @@ def main():
     print('Obtendo token...')
     access_token = get_token()
     macs = [
-        '00:1A:2B:3C:4D:5E',
-        '00:1A:2B:3C:4D:60'
+        'F0:08:D1:C3:D2:B0'
+        # '00:1A:2B:3C:4D:5F'
     ]
     for mac in macs:
-        for _ in range(4):
+        for _ in range(70):
             print('Enviando timeack...')
             send_timeack(access_token, mac)
             print('Enviando dados...')
